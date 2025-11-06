@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Heebo", sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.block-top {
+    width: 434px;
+    height: 18px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    position: sticky;
+    left: 77%;
+}
+
+.block-bottom {
+    width: 1038px;
+    height: 18px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    position: sticky;
+    top: 100%;
+}
+
+.social-top {
+    position: sticky;
+    width: 70px;
+    height: 70px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    background-image: url(../images/Icon\ awesome-whatsapp.svg);
+    background-position: center;
+    background-size: 34px;
+    left: 65px;
+    margin-top: 63px;
+}
+
+.social-bottom {
+    position: sticky;
+    width: 70px;
+    height: 70px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    border-radius: 50%;
+    background-image: url(../images/Icon\ awesome-whatsapp.svg);
+    background-position: center;
+    background-size: 34px;
+}
+
+.socialBottomContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 145px;
+    margin-bottom: 38px;
+    gap: 18px;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    gap: 161px;
+}
+
+.mainContainerMobile {
+    display: none;
+}
+
+.leftCol {
+    text-align: right;
+    width: 822px;
+}
+
+.leftCol > h1 {
+    font-size: 66px;
+    font-weight: 900;
+    color: #FDBD03;
+    margin-bottom: 15px;
+}
+
+.leftCol > p {
+    font-size: 20px;
+    direction: rtl;
+}
+
+.upperContainer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 19.5px;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.formItem > input {
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    height: 50px;
+    width: 400px;
+    direction: rtl;
+    border-style: none;
+    border-bottom: 3px solid #FDBD03;
+}
+
+.bottomContainer {
+    margin-top: 15px;
+}
+
+.bottomContainer > button {
+    width: 166px;
+    height: 50px;   
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "Heebo";
+    color: #000000;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    border-style: none;
+    margin-top: 73px;
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 900;
+    color: #2C2C2C;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-left: -5px;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    border-style: none;
+    border-bottom: 3px solid #FDBD03;
+    direction: rtl;
+}
+
+@media screen and (max-width: 1600px) {
+    .block-top {
+        width: 80%;
+        height: 10px;
+        background: #FDBD03 0% 0% no-repeat padding-box;
+        position: sticky;
+        left: 77%;
+    }
+
+    .block-bottom {
+        width: 100%;
+    }
+
+    .mainContainer {
+        display: none;
+    }
+
+    .mainContainerMobile {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .mainContainerMobile > div > img {
+        transform: translateX(10%);
+    }
+
+    .mainContainerMobile > div {
+        margin: auto;
+        text-align: center;
+        margin-top: 58px;
+    }
+
+    .mainContainerMobile > h1 {
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        color: #FDBD03;
+        margin-bottom: 9px;
+    }
+
+    .mainContainerMobile > p {
+        font-size: 15px;
+        text-align: center;
+        width: 293px;
+        margin: auto;
+        direction: rtl;
+    }
+
+    .formItemMob {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    label {
+        text-align: right;
+    }
+
+    input {
+        background: #E5EEFF 0% 0% no-repeat padding-box;
+        height: 50px;
+        width: 100%;
+        direction: rtl;
+        border-style: none;
+        border-bottom: 3px solid #FDBD03;
+    }
+
+    .lowerBtn {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .lowerBtn > button {
+        width: 100%;
+        height: 50px;   
+        font-size: 22px;
+        font-weight: 900;
+        font-family: "Heebo";
+        color: #000000;
+        background: #FDBD03 0% 0% no-repeat padding-box;
+        border-style: none;
+        margin-top: 17px;
+        cursor: pointer;
+    }
+
+    .social-top {
+        display: none;
+    }
+}

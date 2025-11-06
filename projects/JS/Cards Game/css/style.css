@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: green;
+    display: none;
+}
+
+.container {
+    width: 1100px;
+    height: 800px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100px;
+    height: 200px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: white;
+    background-image: url('../images/card.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.329);
+    content-visibility: hidden;
+    transition: scale 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.1;
+}
+
+.flipped {
+    content-visibility: visible;
+    background-image: none;
+}
+
+.correct {
+    background-color: green;
+    background-image: none;
+    content-visibility: visible;
+}
+
+.start {
+    background-image: none;
+    content-visibility: visible;
+}

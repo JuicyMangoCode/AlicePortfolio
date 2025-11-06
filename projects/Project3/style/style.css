@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Heebo", sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    background-image: url(../images/Coffee.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1085px;
+    height: 100vh;
+}
+
+.right {
+    width: 835px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 438px;
+    height: 506px;
+    text-align: right;
+}
+
+.container > h1 {
+    color: #020253;
+    font-weight: 900;
+    font-size: 43px;
+    margin-bottom: 22px;
+    margin-right: 10px;
+}
+
+.container > p {
+    width: 417px;
+    font-size: 20px;
+    font-weight: 400;
+    direction: rtl;
+}
+
+form {
+    display: block;
+}
+
+form > button {
+    width: 166px;
+    height: 50px;
+    margin-right: 8px;
+    margin-top: 33px;
+    background: #020253 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+}
+
+.formContainer > label {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.formContainer > input {
+    height: 50px;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    border: none;
+    border-bottom: 3px solid #020253;
+    width: 418px;
+    margin: auto;
+    direction: rtl;
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 219px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .container > h1 {
+        margin-top: 47px;
+    }
+
+    form > button {
+        width: 418px;
+    }
+}

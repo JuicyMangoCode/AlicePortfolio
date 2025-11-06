@@ -1,0 +1,34 @@
+body {
+    background-image: url(../img/ShapesBackground.gif.e77deac2da454ff7c9b2fd4e180429cc.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+h1 {
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+label {
+    transition: all 0.3s ease;
+}
+
+label:hover {
+    transform: scale(1.1);
+}
+
+#alertNotification {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}

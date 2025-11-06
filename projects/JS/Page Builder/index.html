@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Builder</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="d-flex">
+    <div id="mainBoard" class="flex-grow-1 p-3 border-end">
+
+    </div>
+
+    <aside id="sideBar" class="p-3 bg-dark text-white" style="width: 300px;">
+        <div class="mb-3">
+            <label for="selectElement" class="form-label">Element Type</label>
+            <select class="form-select" id="selectElement">
+                <option value="">Select Element</option>
+                <option value="div">DIV</option>
+                <option value="p">Paragraph</option>
+                <option value="h1">Heading 1</option>
+                <option value="h2">Heading 2</option>
+                <option value="h3">Heading 3</option>
+                <option value="span">Span</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputBgColor" class="form-label">Background Color</label>
+            <input class="form-control form-control-color" type="color" id="inputBgColor">
+            <div class="form-check mt-2">
+                <input class="form-check-input" type="checkbox" id="checkboxTransparentBg" onchange="toggleBackgroundColor()">
+                <label class="form-check-label" for="checkboxTransparentBg">Transparent Background</label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputTextColor" class="form-label">Text Color</label>
+            <input class="form-control form-control-color" type="color" id="inputTextColor">
+        </div>
+
+        <div class="mb-3">
+            <label for="selectAlignment" class="form-label">Text Alignment</label>
+            <select class="form-select" id="selectAlignment">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="selectContentAlignment" class="form-label">Content Alignment</label>
+            <select class="form-select" id="selectContentAlignment">
+                <option value="left">Left</option>
+                <option value="center">Center</option>
+                <option value="right">Right</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputFontSize" class="form-label">Font Size</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputFontSize" value="16">
+                <select class="form-select" id="selectFontSizeUnit">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputFontWeight" class="form-label">Font Weight</label>
+            <input class="form-control" type="number" id="inputFontWeight" value="400">
+        </div>
+
+        <div class="mb-3">
+            <label for="inputWidth" class="form-label">Width</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputWidth" value="100">
+                <select class="form-select" id="selectWidthUnit">
+                    <option value="%">%</option>
+                    <option value="px">px</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputHeight" class="form-label">Height</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputHeight" value="100">
+                <select class="form-select" id="selectHeightUnit">
+                    <option value="%">%</option>
+                    <option value="px">px</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="contentText" class="form-label">Content</label>
+            <textarea class="form-control" id="contentText"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputBorder" class="form-label">Border</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputBorder" value="0">
+                <select class="form-select" id="selectBorderWidthUnit">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                </select>
+                <select class="form-select" id="selectBorderStyle">
+                    <option value="solid">Solid</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="dotted">Dotted</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputMargin" class="form-label">Margin</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputMargin" value="0">
+                <select class="form-select" id="selectMarginUnit">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputPadding" class="form-label">Padding</label>
+            <div class="input-group">
+                <input class="form-control" type="number" id="inputPadding" value="0">
+                <select class="form-select" id="selectPaddingUnit">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" id="btnAddElement" onclick="addElement()">Add Element</button>
+            <button class="btn btn-warning" id="btnClearBoard" onclick="clearBoard()">Clear Board</button>
+            <button class="btn btn-success" id="btnSaveBoard" onclick="saveBoard()">Save Board</button>
+            <button class="btn btn-info" id="btnOpenSettings" onclick="toggleSettings()">Settings</button>
+        </div>
+
+        <div id="settings" class="mt-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkboxAutoSave" onchange="saveSettings()">
+                <label class="form-check-label" for="checkboxAutoSave">Auto Save</label>
+            </div>
+
+            <div class="mt-3">
+                <label for="selectBackground" class="form-label">Background</label>
+                <select class="form-select" id="selectBackground" onchange="saveSettings()">
+                    <option value="">Select Background</option>
+                    <option value="gradient.png" data-size="120% 120%">Gradient Overlay</option>
+                    <option value="solution-sidebar-background1.jpg" data-size="100% 100%">Background 1</option>
+                    <option value="brown.jpg" data-size="cover">Brown</option>
+                    <option value="green.jpg" data-size="cover">Green</option>
+                </select>
+            </div>
+        </div>
+    </aside>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

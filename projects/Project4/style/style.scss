@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/Path\ 15.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: "Assistant", sans-serif;
+    direction: rtl;
+}
+
+.upperSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 232px;
+}
+
+.container {
+    width: 70%;
+    height: 280px;
+    margin-bottom: 276px;
+}
+
+.container > h1 {
+    font-size: 86px;
+    font-weight: 700;
+    text-align: center;
+    color: #D3E10E;
+    margin-bottom: 0;
+}
+
+.container > p {
+    font-size: 20px;
+    color: #F9F9F9;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.containerBelow {
+    width: 70%;
+    height: 151px;
+    margin-bottom: 140px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    margin-right: 37px;
+}
+
+input {
+    width: 418px;
+    height: 50px;
+    border: none;
+    border-bottom: 3px solid #D3E10E;
+}
+
+label {
+    color: #011560;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+button {
+    width: 166px;
+    height: 50px;
+    margin-top: 25px;
+    margin-right: 61px;
+    background: #D3E10E 0% 0% no-repeat padding-box;
+    border: none;
+    color: #011560;
+    font-size: 22px;
+    font-weight: 700;
+    min-width: 166px;
+}
+
+@media screen and (max-width: 1173px) {
+
+    .container > h1 {
+        font-size: 30px;
+    }
+
+    form {
+        width: 60%;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    input {
+        width: 286px;
+        background: #E5EEFF 0% 0% no-repeat padding-box;
+    }
+
+    form > button {
+        margin-left: 25px;
+        width: 286px;  
+    }
+}

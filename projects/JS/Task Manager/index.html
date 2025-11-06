@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body class="container-fluid mt-5">
+    <script src="assets/scripts/main.js"></script>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="mb-0">Task Manager</h1>
+                </div>
+
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <input type="text" id="taskInput" class="form-control" placeholder="Add a new task">
+                        <input type="date" id="taskDueDate" class="form-control" placeholder="Select due date">
+
+                        <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+                    </div>
+
+                    <textarea id="taskDescription" class="form-control mb-3" placeholder="Add a description"></textarea>
+
+                    <ul id="taskList" class="list-group list-group-flush">
+                    </ul>
+
+                    <div class="card-header bg-primary text-white mt-4">
+                        <h2 class="mb-0">Completed Tasks</h2>
+                    </div>
+
+                    <ul id="completedTaskList" class="list-group list-group-flush mt-3">
+                    </ul>
+                </div>
+
+                <div class="card-footer text-muted text-center">
+                    <small>Made with ❤️ by <a target="_blank" href="https://github.com/JuicyMangoCode">Alice</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="hidden" id="editTaskId">
+
+                    <div class="mb-3">
+                        <label for="editTaskTitle" class="form-label">Task Title</label>
+                        <input type="text" class="form-control" id="editTaskTitle">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editTaskDescription" class="form-label">Task Description</label>
+                        <textarea class="form-control" id="editTaskDescription"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editTaskDueDate" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="editTaskDueDate">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="saveTaskChanges()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    </div>
+
+    <div class="toast-history-container position-fixed bottom-0 start-0 p-3" style="z-index: 11; display: none;">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <button type="button" class="btn-close float-end" aria-label="Close" onclick="toggleToastHistory()"></button>
+                <h5 class="mb-0 text-center">Toast History</h5>
+            </div>
+
+            <div class="card-body" style="max-height: 50vh; overflow-y: auto;">
+                <ul id="toastHistoryList" class="list-group list-group-flush">
+
+                </ul>
+            </div>
+
+            <div class="card-footer text-center">
+                <button class="btn btn-danger" onclick="clearToastHistory()">Clear Toast History</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="toggleToastHistory" class="btn btn-secondary position-fixed bottom-0 start-0 m-3">Toggle Toast History</button>
+</body>
+
+</html>

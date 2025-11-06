@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+}
+
+.mainContainer {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 290px;
+    margin-bottom: 336px;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.mainContainer > h1 {
+    text-align: center;
+    font-family: "Satisfy";
+    font-size: 160px;
+    font-weight: 400;
+    margin-top: 0;
+    text-shadow: 0px 0px 36px #00000087;
+}
+
+.mainContainer > h3 {
+    text-align: center;
+    font-family: "Varela Round", sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: -150px;
+}
+
+.mainContainer > p {
+    text-align: center;
+
+    margin-top: 0;
+    font-family: "Varela Round";
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    font-family: "Varela Round", sans-serif;
+}
+
+input {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    height: 50px;
+    width: 318px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+form > button {
+    width: 206px;
+    height: 56px;
+    margin-top: 20px;
+    font-size: 16px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-style: none;
+    cursor: pointer;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 1204px) {
+    .mainContainer > h1 {
+        font-size: 60px;
+    }
+
+    .mainContainer > h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .mainContainer > p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    form {
+        flex-direction: column-reverse;
+    }
+
+    form > button {
+        width: 602px;
+    }
+
+    input {
+        width: 602px;
+    }
+
+    form > div > label {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    input {
+        width: 301px;
+    }
+
+    form > button {
+        width: 301px;
+    }
+}
